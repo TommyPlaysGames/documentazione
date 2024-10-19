@@ -1,0 +1,75 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-10-16T20:53:53.3384626"><title>Programmazione Orientata agli Oggetti (OOP) | Spada Tommaso - Documentazione</title><script type="application/json" id="virtual-toc-data">[{"id":"concetti-principali","level":0,"title":"Concetti Principali","anchor":"#concetti-principali"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Programmazione Orientata agli Oggetti (OOP) | Spada Tommaso - Documentazione"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Spada Tommaso - Documentazione Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/programmazione-orientata-agli-oggetti-oop.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Programmazione Orientata agli Oggetti (OOP) | Spada Tommaso - Documentazione"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/programmazione-orientata-agli-oggetti-oop.html#webpage",
+    "url": "writerside-documentation/programmazione-orientata-agli-oggetti-oop.html",
+    "name": "Programmazione Orientata agli Oggetti (OOP) | Spada Tommaso - Documentazione",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Spada Tommaso - Documentazione Help"
+}</script><!-- End Schema.org --></head><body data-id="Programmazione-Orientata-agli-Oggetti-OOP" data-main-title="Programmazione Orientata agli Oggetti (OOP)" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="starter.md|Introduzione alla Documentazione Java"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Spada Tommaso - Documentazione  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Programmazione-Orientata-agli-Oggetti-OOP" id="Programmazione-Orientata-agli-Oggetti-OOP.md">Programmazione Orientata agli Oggetti (OOP)</h1><p id="-vsotk2_3">Java &egrave; un linguaggio orientato agli oggetti, e questa sezione descrive i concetti fondamentali di OOP, inclusi classi, oggetti, ereditariet&agrave; e polimorfismo.</p><section class="chapter"><h2 id="concetti-principali" data-toc="concetti-principali">Concetti Principali</h2><section class="chapter"><h3 id="classi-e-oggetti" data-toc="classi-e-oggetti">Classi e Oggetti</h3><p id="-vsotk2_10">In Java, tutto ruota attorno alle classi e agli oggetti:</p><ul class="list _bullet" id="-vsotk2_11"><li class="list__item" id="-vsotk2_12"><p id="-vsotk2_14"><span class="control" id="-vsotk2_16">Classe</span>: Definisce un modello o schema da cui creare oggetti. Le classi possono contenere campi (variabili) e metodi.</p><div class="code-block" data-lang="java">
+class Persona {
+String nome;
+int età;
+    void saluta() {
+        System.out.println(&quot;Ciao, sono &quot; + nome);
+    }
+}
+</div></li><li class="list__item" id="-vsotk2_13"><p id="-vsotk2_17"><span class="control" id="-vsotk2_19">Oggetti</span>: Sono istanze di una classe.</p><div class="code-block" data-lang="java">
+Persona p = new Persona();
+p.nome = &quot;Mario&quot;;
+p.saluta();
+</div></li></ul></section><section class="chapter"><h3 id="incapsulamento" data-toc="incapsulamento">Incapsulamento</h3><p id="-vsotk2_20">L'incapsulamento consente di nascondere i dettagli interni delle classi e di esporre solo ci&ograve; che &egrave; necessario:</p><ul class="list _bullet" id="-vsotk2_21"><li class="list__item" id="-vsotk2_22"><p id="-vsotk2_23">I campi privati possono essere accessibili solo tramite metodi pubblici (getter/setter).</p><div class="code-block" data-lang="java">
+class Persona {
+private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nuovoNome) {
+        nome = nuovoNome;
+    }
+}
+</div></li></ul></section><section class="chapter"><h3 id="ereditariet" data-toc="ereditariet">Ereditariet&agrave;</h3><p id="-vsotk2_25">L'ereditariet&agrave; permette a una classe di ereditare i metodi e i campi di un'altra classe:</p><div class="code-block" data-lang="java">
+class Animale {
+    void dormi() {
+        System.out.println(&quot;Sto dormendo&quot;);
+    }
+}
+
+class Cane extends Animale {
+    void abbaia() {
+        System.out.println(&quot;Woof Woof&quot;);
+    }
+}
+</div><p id="-vsotk2_27">Un cane eredita il comportamento di un animale e aggiunge nuove funzionalit&agrave;.</p></section><section class="chapter"><h3 id="polimorfismo" data-toc="polimorfismo">Polimorfismo</h3><p id="-vsotk2_28">Il polimorfismo permette di trattare gli oggetti in modo flessibile, utilizzando una classe base per riferirsi a oggetti di classi derivate:</p><div class="code-block" data-lang="java">
+Animale a = new Cane();
+a.dormi(); // Output: Sto dormendo
+</div></section><section class="chapter"><h3 id="interfacce-e-classi-astratte" data-toc="interfacce-e-classi-astratte">Interfacce e Classi Astratte</h3><p id="-vsotk2_30">Le interfacce e le classi astratte offrono un modo per definire comportamenti comuni che possono essere implementati in classi diverse:</p><ul class="list _bullet" id="-vsotk2_31"><li class="list__item" id="-vsotk2_32"><p id="-vsotk2_34"><span class="control" id="-vsotk2_36">Interfacce</span>: Definiscono solo metodi astratti, che devono essere implementati nelle classi concrete.</p><div class="code-block" data-lang="java">
+interface Animale {
+    void suono();
+}
+
+class Cane implements Animale {
+    public void suono() {
+        System.out.println(&quot;Woof Woof&quot;);
+    }
+}
+</div></li><li class="list__item" id="-vsotk2_33"><p id="-vsotk2_37"><span class="control" id="-vsotk2_39">Classi Astratte</span>: Possono contenere sia metodi astratti che metodi concreti.</p><div class="code-block" data-lang="java">
+abstract class Forma {
+    abstract void disegna();
+}
+
+class Cerchio extends Forma {
+    void disegna() {
+        System.out.println(&quot;Disegna un cerchio&quot;);
+    }
+}
+</div></li></ul></section></section><div class="last-modified">Last modified: 16 October 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="fondamenti-di-java.html" class="navigation-links__prev">Fondamenti di Java</a><a href="librerie-e-api-java.html" class="navigation-links__next">Librerie e API Java</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>

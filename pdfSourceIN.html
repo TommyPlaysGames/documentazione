@@ -1,0 +1,223 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceIN</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1897185137">Introduzione alla Documentazione Java</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-741852065">Prodotto Matrici JTextArea - Documentazione</a></div><div class="page">4</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1897185137">Introduzione alla Documentazione Java</h1><p id="-1897185137#-z46j0u_3">Questa documentazione fornisce una panoramica dettagliata dei principi fondamentali del linguaggio di programmazione Java e delle sue applicazioni. Java &egrave; un linguaggio orientato agli oggetti, robusto e multi-piattaforma, ampiamente utilizzato per lo sviluppo di applicazioni desktop, web, mobile e sistemi embedded.</p><section><h2 id="-1897185137#obiettivi-della-documentazione" data-toc="obiettivi-della-documentazione#starter.md-obiettivi-della-documentazione">Obiettivi della Documentazione</h2><p id="-1897185137#-z46j0u_7">L'obiettivo principale &egrave; fornire una guida chiara e concisa per comprendere le funzionalit&agrave; di Java, dalle basi fino agli aspetti pi&ugrave; avanzati, con esempi pratici e spiegazioni tecniche.</p><section><h3 id="-1897185137#a-chi-si-rivolge" data-toc="a-chi-si-rivolge#starter.md-a-chi-si-rivolge">A chi si Rivolge</h3><p id="-1897185137#-z46j0u_9">Questa documentazione &egrave; pensata per:</p><ul class="list" id="-1897185137#-z46j0u_10" start="1"><li class="list-item" id="-1897185137#-z46j0u_11"><p><span class="control" id="-1897185137#-z46j0u_14">Principianti</span>: coloro che stanno iniziando a programmare e desiderano imparare i concetti fondamentali di Java.</p></li><li class="list-item" id="-1897185137#-z46j0u_12"><p><span class="control" id="-1897185137#-z46j0u_15">Sviluppatori esperti</span>: programmatori con esperienza che cercano una risorsa di riferimento per approfondire specifici aspetti di Java o risolvere problemi complessi.</p></li><li class="list-item" id="-1897185137#-z46j0u_13"><p><span class="control" id="-1897185137#-z46j0u_16">Insegnanti e studenti</span>: coloro che desiderano utilizzare Java come linguaggio di insegnamento o apprendimento.</p></li></ul></section></section><section><h2 id="-1897185137#struttura-della-documentazione" data-toc="struttura-della-documentazione#starter.md-struttura-della-documentazione">Struttura della Documentazione</h2><p id="-1897185137#-z46j0u_17">La documentazione &egrave; organizzata in sezioni che coprono diversi argomenti chiave:</p><ul class="list" id="-1897185137#-z46j0u_18" start="1"><li class="list-item" id="-1897185137#-z46j0u_19"><p><span class="control" id="-1897185137#-z46j0u_25">Fondamenti di Java</span>: Introduzione ai concetti base, come la sintassi, le variabili, i tipi di dati, e le strutture di controllo.</p></li><li class="list-item" id="-1897185137#-z46j0u_20"><p><span class="control" id="-1897185137#-z46j0u_26">Programmazione Orientata agli Oggetti (OOP)</span>: Approfondimento su classi, oggetti, ereditariet&agrave;, polimorfismo, incapsulamento e astrazione.</p></li><li class="list-item" id="-1897185137#-z46j0u_21"><p><span class="control" id="-1897185137#-z46j0u_27">Librerie e API Java</span>: Utilizzo delle principali librerie standard di Java, come le collezioni, le librerie di I/O e la gestione delle eccezioni.</p></li><li class="list-item" id="-1897185137#-z46j0u_22"><p><span class="control" id="-1897185137#-z46j0u_28">Interfacce Grafiche (GUI)</span>: Creazione di interfacce grafiche utilizzando Java Swing e JavaFX.</p></li><li class="list-item" id="-1897185137#-z46j0u_23"><p><span class="control" id="-1897185137#-z46j0u_29">Database e Persistenza</span>: Connessione a database relazionali tramite JDBC e ORM (Object Relational Mapping) con strumenti come Hibernate.</p></li><li class="list-item" id="-1897185137#-z46j0u_24"><p><span class="control" id="-1897185137#-z46j0u_30">Applicazioni Avanzate</span>: Multithreading, gestione della memoria, e ottimizzazioni delle performance.</p></li></ul></section><section><h2 id="-1897185137#conclusione" data-toc="conclusione#starter.md-conclusione">Conclusione</h2><p id="-1897185137#-z46j0u_31">Java &egrave; un linguaggio versatile e potente che offre soluzioni per ogni tipo di sviluppo software. Questa documentazione ti guider&agrave; passo dopo passo nella comprensione di Java, fornendo esempi pratici e spiegazioni dettagliate, affinch&eacute; tu possa migliorare le tue competenze e utilizzare al meglio questo linguaggio nella realizzazione dei tuoi progetti.</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-741852065">Prodotto Matrici JTextArea - Documentazione</h1><section><h2 id="-741852065#descrizione" data-toc="descrizione#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-descrizione">Descrizione</h2><p id="-741852065#y4uule_9">Il programma <span class="inline-code" id="-741852065#y4uule_13">spadaTommasoProdottoMatriciJTextArea</span> implementa un'applicazione Java Swing che permette di visualizzare la moltiplicazione di due matrici generate casualmente. Le matrici e il loro prodotto vengono visualizzati in tre diverse aree di testo (<span class="inline-code" id="-741852065#y4uule_14">JTextArea</span>), ognuna contenuta in un pannello di scorrimento (<span class="inline-code" id="-741852065#y4uule_15">JScrollPane</span>).</p><p id="-741852065#y4uule_10">Le dimensioni delle matrici sono predefinite:</p><ul class="list" id="-741852065#y4uule_11" start="1"><li class="list-item" id="-741852065#y4uule_16"><p>La prima matrice ha dimensioni 2x3.</p></li><li class="list-item" id="-741852065#y4uule_17"><p>La seconda matrice ha dimensioni 3x4.</p></li><li class="list-item" id="-741852065#y4uule_18"><p>Il risultato della moltiplicazione sar&agrave; una matrice 2x4.</p></li></ul><section><h3 id="-741852065#funzionalit-principali" data-toc="funzionalit-principali#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-funzionalit-principali">Funzionalit&agrave; principali:</h3><ul class="list" id="-741852065#y4uule_19" start="1"><li class="list-item" id="-741852065#y4uule_20"><p>Generazione di due matrici con valori casuali.</p></li><li class="list-item" id="-741852065#y4uule_21"><p>Calcolo del prodotto delle due matrici.</p></li><li class="list-item" id="-741852065#y4uule_22"><p>Visualizzazione delle matrici e del loro prodotto all'interno di <span class="inline-code" id="-741852065#y4uule_23">JTextArea</span>.</p></li></ul></section></section><section><h2 id="-741852065#classi-e-metodi" data-toc="classi-e-metodi#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-classi-e-metodi">Classi e Metodi</h2><section><h3 id="-741852065#classe-spadatommasoprodottomatricijtextarea" data-toc="classe-spadatommasoprodottomatricijtextarea#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-classe-spadatommasoprodottomatricijtextarea">Classe spadaTommasoProdottoMatriciJTextArea</h3><p id="-741852065#y4uule_27">Questa classe estende <span class="inline-code" id="-741852065#y4uule_30">JFrame</span> e rappresenta la finestra principale dell'applicazione. Il costruttore configura la GUI, genera le matrici e visualizza il risultato della moltiplicazione.</p><section><h4 id="-741852065#metodi-principali" data-toc="metodi-principali#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-metodi-principali">Metodi principali:</h4><ul class="list" id="-741852065#y4uule_31" start="1"><li class="list-item" id="-741852065#y4uule_32"><p id="-741852065#y4uule_36"><span class="control" id="-741852065#y4uule_37"><span class="inline-code" id="-741852065#y4uule_39">spadaTommasoProdottoMatriciJTextArea()</span></span> Costruttore che configura il layout della finestra, crea tre <span class="inline-code" id="-741852065#y4uule_38">JTextArea</span> per visualizzare le due matrici e il risultato, e calcola il prodotto delle matrici.</p></li><li class="list-item" id="-741852065#y4uule_33"><p id="-741852065#y4uule_40"><span class="control" id="-741852065#y4uule_41"><span class="inline-code" id="-741852065#y4uule_43">generaMatrice(int righe, int colonne)</span></span> Metodo che genera una matrice di dimensioni <span class="inline-code" id="-741852065#y4uule_42">righe x colonne</span> con valori casuali compresi tra 0 e 9.</p></li><li class="list-item" id="-741852065#y4uule_34"><p id="-741852065#y4uule_44"><span class="control" id="-741852065#y4uule_45"><span class="inline-code" id="-741852065#y4uule_47">visualizzaMatrice(JTextArea textArea, int[][] matrice)</span></span> Metodo che converte una matrice in una stringa formattata e la visualizza in un componente <span class="inline-code" id="-741852065#y4uule_46">JTextArea</span>.</p></li><li class="list-item" id="-741852065#y4uule_35"><p id="-741852065#y4uule_48"><span class="control" id="-741852065#y4uule_49"><span class="inline-code" id="-741852065#y4uule_50">moltiplicaMatrici(int[][] matrice1, int[][] matrice2)</span></span> Metodo che esegue la moltiplicazione di due matrici e restituisce il risultato.</p></li></ul></section></section><section><h3 id="-741852065#esempio-di-output" data-toc="esempio-di-output#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-esempio-di-output">Esempio di Output:</h3><p id="-741852065#y4uule_51">La finestra dell'applicazione si suddivide in tre pannelli:</p><ol class="list list-decimal" id="-741852065#y4uule_52" type="1" start="1"><li class="list-item" id="-741852065#y4uule_53"><p><span class="control" id="-741852065#y4uule_56">Matrice 1:</span> Visualizza la prima matrice generata (ad es. 2x3).</p></li><li class="list-item" id="-741852065#y4uule_54"><p><span class="control" id="-741852065#y4uule_57">Matrice 2:</span> Visualizza la seconda matrice generata (ad es. 3x4).</p></li><li class="list-item" id="-741852065#y4uule_55"><p><span class="control" id="-741852065#y4uule_58">Risultato:</span> Mostra il prodotto delle due matrici (ad es. 2x4).</p></li></ol></section></section><section><h2 id="-741852065#esecuzione-del-programma" data-toc="esecuzione-del-programma#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-esecuzione-del-programma">Esecuzione del programma</h2><p id="-741852065#y4uule_59">Il metodo <span class="inline-code" id="-741852065#y4uule_61">main</span> avvia l'applicazione creando un'istanza della classe <span class="inline-code" id="-741852065#y4uule_62">spadaTommasoProdottoMatriciJTextArea</span>. La finestra si apre con tre aree di testo che mostrano le matrici e il loro prodotto. Il programma termina chiudendo la finestra.</p><div class="detached code-block" id="-741852065#y4uule_60"><pre><code class="language-java">public static void main(String[] args) {
+    spadaTommasoProdottoMatriciJTextArea frame = new spadaTommasoProdottoMatriciJTextArea();
+    frame.setVisible(true);
+}</code></pre></div></section><section><h2 id="-741852065#dettagli-tecnici" data-toc="dettagli-tecnici#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-dettagli-tecnici">Dettagli Tecnici</h2><ul class="list" id="-741852065#y4uule_63" start="1"><li class="list-item" id="-741852065#y4uule_64"><p id="-741852065#y4uule_67"><span class="control" id="-741852065#y4uule_68">Layout utilizzato:</span> <span class="inline-code" id="-741852065#y4uule_69">GridLayout(1, 3)</span> La finestra utilizza un layout a griglia con una sola riga e tre colonne, in cui vengono posizionati i pannelli di scorrimento delle aree di testo.</p></li><li class="list-item" id="-741852065#y4uule_65"><p id="-741852065#y4uule_70"><span class="control" id="-741852065#y4uule_71">Gestione delle matrici:</span> La moltiplicazione delle matrici avviene tramite tre cicli <span class="inline-code" id="-741852065#y4uule_72">for</span> annidati, che seguono la classica procedura di moltiplicazione tra matrici.</p></li><li class="list-item" id="-741852065#y4uule_66"><p id="-741852065#y4uule_73"><span class="control" id="-741852065#y4uule_75">Componenti Swing utilizzati:</span></p><ul class="list" id="-741852065#y4uule_74" start="1"><li class="list-item" id="-741852065#y4uule_76"><p><span class="inline-code" id="-741852065#y4uule_78">JTextArea</span>: per visualizzare le matrici.</p></li><li class="list-item" id="-741852065#y4uule_77"><p><span class="inline-code" id="-741852065#y4uule_79">JScrollPane</span>: per aggiungere la barra di scorrimento orizzontale e verticale in caso di necessit&agrave;.</p></li></ul></li></ul></section><section><h2 id="-741852065#dipendenze" data-toc="dipendenze#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-dipendenze">Dipendenze</h2><p id="-741852065#y4uule_80">Il programma richiede le seguenti librerie:</p><ul class="list" id="-741852065#y4uule_81" start="1"><li class="list-item" id="-741852065#y4uule_82"><p><span class="inline-code" id="-741852065#y4uule_85">javax.swing.*</span>: per la gestione della GUI.</p></li><li class="list-item" id="-741852065#y4uule_83"><p><span class="inline-code" id="-741852065#y4uule_86">java.awt.*</span>: per i componenti grafici e il layout.</p></li><li class="list-item" id="-741852065#y4uule_84"><p><span class="inline-code" id="-741852065#y4uule_87">java.util.Random</span>: per generare i valori casuali delle matrici.</p></li></ul></section><section><h2 id="-741852065#note" data-toc="note#spadaTommasoProdottoMatriciJTextArea-Documentazione.md-note">Note</h2><ul class="list" id="-741852065#y4uule_88" start="1"><li class="list-item" id="-741852065#y4uule_89"><p>Il programma &egrave; pensato per essere eseguito su una finestra di dimensioni standard (1366x768).</p></li><li class="list-item" id="-741852065#y4uule_90"><p>Il calcolo della moltiplicazione richiede che il numero di colonne della prima matrice sia uguale al numero di righe della seconda matrice.</p></li></ul></section></article></div></section></div></body></html>
