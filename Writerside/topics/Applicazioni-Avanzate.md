@@ -1,6 +1,6 @@
 # Applicazioni Avanzate
 
-Le applicazioni avanzate in Java combinano varie tecnologie come interfacce grafiche, database, e algoritmi complessi per risolvere problemi reali o gestire sistemi complessi. Una parte importante di queste applicazioni è l'integrazione efficiente tra le componenti.
+Le applicazioni avanzate in Java combinano varie tecnologie come interfacce grafiche, database e algoritmi complessi per risolvere problemi reali o gestire sistemi complessi. Una parte importante di queste applicazioni è l'integrazione efficiente tra le componenti.
 
 ## Concetti Principali
 
