@@ -73,7 +73,7 @@ public class spadaTommasoIncrementoDecremento {
 ```
 ## Dettagli Tecnici
 
-- **Layout utilizzato:** `FlowLayout`  
+- **Layout utilizzato:** `FlowLayout` 
   La finestra utilizza un layout che organizza i componenti in una disposizione lineare.
 
 - **Componenti Swing utilizzati:**
