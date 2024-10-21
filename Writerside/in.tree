@@ -14,8 +14,8 @@
         <toc-element topic="Database-e-Persistenza.md"/>
         <toc-element topic="Applicazioni-Avanzate.md"/>
         <toc-element topic="Documentazione-Java.md">
-            <toc-element topic="GUI-Incremento-Decremento-Documentazione.md"/>
             <toc-element topic="spadaTommasoProdottoMatriciJTextArea-Documentazione.md"/>
+            <toc-element topic="GUI-Incremento-Decremento-Documentazione.md"/>
         </toc-element>
     </toc-element>
 </instance-profile>
